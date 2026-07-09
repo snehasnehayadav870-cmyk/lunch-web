@@ -1,0 +1,322 @@
+< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"content="width=device-width, initial-scale=1.0"><title>BusinessPro | Grow Your Business</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet"><style> :root {
+  --max-width: 1100px;
+  --container-pad: 4vw;
+  --hero-min-height: 70vh;
+  --radius: 12px;
+  --accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+  color: #111;
+  line-height: 1.5
+}
+
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+  z-index: 1000
+}
+
+.container {
+  width: calc(100% - var(--container-pad));
+  max-width: var(--max-width);
+  margin: 0 auto
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: clamp(20px, 3vw, 28px)
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s
+}
+
+nav a:hover {
+  color: var(--accent)
+}
+
+.hero {
+  margin-top: 72px;
+  min-height: var(--hero-min-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), #0ea5e9);
+  color: #fff
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 720px;
+  padding: 3vw
+}
+
+.hero h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  margin-bottom: 18px
+}
+
+.hero p {
+  font-size: clamp(14px, 2.2vw, 18px);
+  margin-bottom: 28px
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--accent);
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600
+}
+
+section {
+  padding: clamp(40px, 6vw, 90px) 0
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px
+}
+
+.section-title h2 {
+  font-size: clamp(22px, 3.4vw, 36px);
+  color: #1e293b
+}
+
+.section-title p {
+  color: #64748b
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px
+}
+
+.card {
+  background: #fff;
+  padding: clamp(18px, 3vw, 32px);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .06)
+}
+
+.card h3 {
+  color: var(--accent);
+  margin: 12px 0
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  align-items: center
+}
+
+.about img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 18px
+}
+
+.product-item {
+  background: #fff;
+  padding: 12px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.product-item img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block
+}
+
+.product-item a img {
+  border-radius: 10px
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap
+}
+
+.product-item .btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem
+}
+
+.product-item .btn:hover {
+  opacity: .92
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  text-align: center
+}
+
+.stat {
+  background: var(--accent);
+  color: white;
+  padding: 20px;
+  border-radius: var(--radius)
+}
+
+.stat h2 {
+  font-size: clamp(20px, 3vw, 36px)
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .06)
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 14px
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 24px
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 16px
+}
+
+.modal.show {
+  display: flex
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  text-align: center
+}
+
+@media (max-width:768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center
+  }
+
+  .hero {
+    min-height: 56vh
+  }
+
+  section {
+    padding: 40px 0
+  }
+}
+
+</style><header><div class="container"><nav><div class="logo">BusinessPro</div><ul><li><a href="#home">Home</a></li><li><a href="#products">Products</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav></div></header><div class="modal"id="messageModal"><div class="modal-box"><h3 id="modalTitle">Success</h3><p id="modalMessage">Your request has been submitted.</p><button type="button"onclick="closeModal()">Close</button></div></div><section class="hero"id="home"><div class="hero-content container"><h1>Helping Fashion Brands Grow Faster</h1><p>We create modern digital solutions that help companies increase sales,
+improve productivity,
+and build a stronger online presence.</p><a href="#products"class="btn">Get Started</a></div></section><section id="products"><div class="container"><div class="about"><div><div class="product-gallery"><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800"alt="Fashion product 1"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=800"alt="Fashion product 2"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800"alt="Fashion product 3"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800"alt="Fashion product 4"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1521334884684-d80222895322?w=800"alt="Fashion product 5"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=800"alt="Fashion product 6"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div></div><div class="product-item"><a href="#contact"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800"alt="Fashion product 8"></a><div class="product-actions"><a href="#contact"class="btn">View Product</a></div></div></div></div><div><h2>Our Products</h2><br><p>We help startups and established businesses transform ideas into successful digital products. Our experienced team focuses on innovation,
+quality,
+and customer satisfaction. </p><br><div class="product-actions"><a href="#contact"class="btn">Contact Us</a></div></div></div></div></section><section id="services"><div class="container"><div class="section-title"><h2>Our Services</h2><p>Everything your business needs in one place.</p></div><div class="services"><div class="card"><h3>🌐 fashion Brands </h3><p>Professional websites designed for speed,
+performance,
+and conversions.</p></div><div class="card"><h3>📱 Mobile Apps</h3><p>Android and iOS applications built with modern technologies.</p></div><div class="card"><h3>📈 Digital Marketing</h3><p>SEO,
+Google Ads,
+Facebook Ads,
+and social media marketing.</p></div><div class="card"><h3>☁ Cloud Solutions</h3><p>Reliable hosting,
+cloud migration,
+and business automation.</p></div></div></div></section><section id="about"><div class="container"><div class="about"><div><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"alt="Team"></div><div><h2>About Our Company</h2><br><p>We help startups and established businesses transform ideas into successful digital products. Our experienced team focuses on innovation,
+quality,
+and customer satisfaction. </p><br><a href="#contact"class="btn">Learn More</a></div></div></div></section><section><div class="container"><div class="stats"><div class="stat"><h2>500+</h2><p>Projects</p></div><div class="stat"><h2>200+</h2><p>Clients</p></div><div class="stat"><h2>10+</h2><p>Years Experience</p></div><div class="stat"><h2>24/7</h2><p>Support</p></div></div></div></section><section id="contact"><div class="container"><div class="section-title"><h2>Contact Us</h2><p>Let's discuss your next project.</p>
+</div><div class="contact"><div><h3>Get in Touch</h3><br><p><strong>Email:</strong>tejubeatbox1@gmail.com</p><p><strong>Phone:</strong>+91 7338682925</p><p><strong>Address:</strong>fashion brands</p><p><strong>Shop:</strong><a href="https://www.flipkart.com"target="_blank"rel="noopener noreferrer">https: //www.flipkart.com</a></p>
+
+</div></div></div></section><footer><p>@2026 Fashion Brands. All Rights Reserved.</p></body></html>
